@@ -25,9 +25,11 @@ var seattle = {
       temp = this.cookiesPurchased[i];
       total += temp;
 
+
       if (i === (hours.length - 1)) {
         this.cookiesPurchased[i] = total;
-        console.log(this.cookiesPurchased );
+       
+
       }
     }
     console.log(this.cookiesPurchased );
@@ -37,12 +39,19 @@ var seattle = {
   },
 
 
+  render: function () {
+
 
   render: function () {
     var cust = document.getElementById('seattle');
 
+
     var ulElement = document.createElement('ul');
     for (var i = 0; i < this.cookiesPurchased.length; i++) {
+
+    
+    var ulElement = document.createElement('ul');
+    for (var i = 0; i < hours.length; i++) {
 
       var listElement = document.createElement('li');
       listElement.textContent = `${hours[i]} : ${this.cookiesPurchased[i]}`;
@@ -50,6 +59,7 @@ var seattle = {
     }
 
     cust.appendChild(ulElement);
+
 
   },
 };
