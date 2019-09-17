@@ -83,7 +83,7 @@ var dubai = {
     }
     return this.cookiesPurchased;
 
-  },
+  },   
 
   render: function () {
 
