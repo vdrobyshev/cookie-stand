@@ -133,13 +133,6 @@ City.prototype.populate = function () {
 //////////////////////
 City.prototype.footer = function () {
 
-  // var trEl = document.createElement('tr');
-
-  // var tdEl = document.createElement('td');
-  // tdEl.textContent = 'Total';
-  // trEl.appendChild(tdEl);
-
-  // table.appendChild(trEl);
   var trEl = document.createElement('tr');
 
   var tdEl = document.createElement('td');
@@ -148,14 +141,13 @@ City.prototype.footer = function () {
 
   trEl.appendChild(tdEl);
 
-  
-  //////
-  for (var i=0; i < hours.length; i++) {
+
+  for (var i = 0; i < hours.length; i++) {
 
     var storesHourly = 0;
     var td = document.createElement('td');
-    
-    
+
+
     for (var j = 0; j < City.all.length; j++) {
       storesHourly += City.all[j].cookiesPurchased[i];
       td.textContent = storesHourly;
@@ -173,14 +165,46 @@ City.prototype.footer = function () {
 
 
 
+var addStore = document.getElementById('user-form');
+
+addStore.addEventListener('submit', addNewStore);
+
+function addNewStore(event) {
+
+  event.preventDefault();
+
+  var locationName = event.target.cityname.value;
+  var minCust = event.target.minvalue.value;
+  var maxCust = event.target.maxvalue.value;
+  var cupsPerCustomer = event.target.avgvalue.value;
+
+
+  var obj = new City(locationName, +minCust, +maxCust, +cupsPerCustomer);
+
+  obj.cookiesSold();
+  obj.populate();
+  obj.footer();
+
+
+  event.target.cityname.value = null;
+  event.target.minvalue.value = null;
+  event.target.maxvalue.value = null;
+  event.target.avgvalue.value = null;
+
+
+  console.log(obj.cookiesPurchased);
+
+}
 
 createHeader();
-seattle.populate();
-tokyo.populate();
-dubai.populate();
-paris.populate();
-lima.populate();
-seattle.footer();
 
+function callpopulate() {
+  for (var i = 0; i < City.all.length; i++) {
+    City.all[i].populate();
+  }
+
+}
+
+callpopulate();
 
 
