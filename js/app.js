@@ -126,34 +126,49 @@ City.prototype.populate = function () {
 
 
 };
+City.prototype.footer = function (){
+  
+  //console.log(City.all[4]);
 
-function footer() {
+
   var total = 0;
+  var totalArray=[];
+  var counter =0;
+  
   var createTR = document.createElement('tr');
 
-  var empty = document.createElement('tr');
-  empty.textContent = 'Total';
-  createTR.append(empty);
+  var totEl = document.createElement('tr');
+  totEl.textContent = 'Total';
+  createTR.append(totEl);
 
+  //totalArray.push(City.all[1].cookiesPurchased[2]);
+  
 
-  for (var i = 0; i < City.length; i++) {
+  for (var i = 0; i < 2; i++) {
     for (var x = 0; x < hours.length; x++) {
 
-      total = total + this.cookiesSold[x];
-      console.log(total)
-      var createTH = document.createElement('td');
-      createTH.textContent = total;
-      createTR.appendChild(createTH);
+      //totalArray.push(City.all[i].cookiesPurchased[x]);
+      total=City.all[i].cookiesPurchased[x];
+      
+      totalArray.splice(x,0,total);//6am
+      totalArray[x]
+
+console.log(totalArray);
+      
+      //console.log(City.all);
     }
 
+//  var createTH = document.createElement('td');
+//        createTH.textContent = total;
+//        createTR.appendChild(createTH);
 
 
   }
 
-  table.appendChild(createTR);
+  //table.appendChild(createTR);
 
 
-}
+};
 
 createHeader();
 seattle.populate();
@@ -161,8 +176,7 @@ tokyo.populate();
 dubai.populate();
 paris.populate();
 lima.populate();
-footer();
-
+seattle.footer();
 
 
 
