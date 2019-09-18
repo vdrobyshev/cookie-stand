@@ -17,7 +17,7 @@ function City(cityname, minCust, maxCust, avCookie) {
 
 }
 City.all = [];
-
+//console.log(City.length);
 
 
 City.prototype.cookiesSold = function () {
@@ -40,6 +40,7 @@ City.prototype.cookiesSold = function () {
 };
 
 City.prototype.render = function () {
+
   var cust = document.getElementById(`${this.name}`);
 
   var ulElement = document.createElement('ul');
@@ -48,8 +49,10 @@ City.prototype.render = function () {
     var listElement = document.createElement('li');
     listElement.textContent = `${hours[i]} : ${this.cookiesPurchased[i]}`;
     ulElement.appendChild(listElement);
-  }
 
+    //if(City.length)
+  }
+  //this.counter++;
   cust.appendChild(ulElement);
 
 };
@@ -60,7 +63,7 @@ City.prototype.render = function () {
 var seattle = new City('seattle', 23, 65, 6.3);
 
 seattle.cookiesSold();
-// seattle.render();
+//seattle.render();
 
 var tokyo = new City('tokyo', 3, 24, 1.2);
 tokyo.cookiesSold();
@@ -76,7 +79,7 @@ paris.cookiesSold();
 
 var lima = new City('lima', 2, 16, 4.6);
 lima.cookiesSold();
-// lima.render();
+lima.render();
 
 
 var table = document.getElementById('data');
@@ -101,41 +104,20 @@ function createHeader() {
 
 };
 
-// function createSides() {
-//   var createTR = document.createElement('tr');
-//   var empty = document.createElement('th');
-//   createTR.append(empty);
-
-//   for (var i = 0; i < hours.length; i++) {
-
-//     var createTH = document.createElement('th');
-
-//     createTH.textContent = hours[i];
-
-//     createTR.appendChild(createTH);
-
-//   }
-
-//   table.appendChild(createTR);
-
-
-// };
 
 City.prototype.populate = function () {
+
   var createTR = document.createElement('tr');
 
   var empty = document.createElement('tr');
-  empty.textContent=this.name;
+  empty.textContent = this.name;
   createTR.append(empty);
 
 
   for (var i = 0; i < hours.length; i++) {
 
     var createTH = document.createElement('td');
-
-
     createTH.textContent = this.cookiesPurchased[i];
-    
     createTR.appendChild(createTH);
 
   }
@@ -145,56 +127,42 @@ City.prototype.populate = function () {
 
 };
 
+function footer() {
+  var total = 0;
+  var createTR = document.createElement('tr');
+
+  var empty = document.createElement('tr');
+  empty.textContent = 'Total';
+  createTR.append(empty);
+
+
+  for (var i = 0; i < City.length; i++) {
+    for (var x = 0; x < hours.length; x++) {
+
+      total = total + this.cookiesSold[x];
+      console.log(total)
+      var createTH = document.createElement('td');
+      createTH.textContent = total;
+      createTR.appendChild(createTH);
+    }
+
+
+
+  }
+
+  table.appendChild(createTR);
+
+
+}
+
 createHeader();
 seattle.populate();
 tokyo.populate();
 dubai.populate();
 paris.populate();
 lima.populate();
+footer();
 
 
 
 
-
-
-
-// function generateData()
-
-// {
-
-//   createHeader();
-
-//   for(var i=0; i < Coffee.potatos.length; i++){
-
-//     Coffee.potatos[i].render();
-
-
-
-//   }
-// Coffee.prototype.render = function(){
-
-//   // create a new table row
-
-//   var newTR = document.createElement('tr');
-
-//   // populate the data with tds
-
-//   for(var i =0; i < headers.length; i++ ){
-
-//     var newTD = document.createElement('td');
-
-//     newTD.textContent = this[headers[i]]; 
-
-//     newTR.appendChild(newTD);
-
-//   }
-
-//   coffeeData.appendChild(newTR);
-
-//   // detect when we are at the end
-
-//   // attach the TD onto the TR
-
-//   // Attach the TR onto the Table
-
-// }
