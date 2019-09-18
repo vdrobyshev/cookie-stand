@@ -64,111 +64,111 @@ City.prototype.render = function () {
 var seattle = new City('seattle', 23, 65, 6.3);
 
 seattle.cookiesSold();
-seattle.render();
+//seattle.render();
 
 var tokyo = new City('tokyo', 3, 24, 1.2);
 tokyo.cookiesSold();
-tokyo.render();
+//tokyo.render();
 
 var dubai = new City('dubai', 11, 38, 3.7);
 dubai.cookiesSold();
-dubai.render();
+//dubai.render();
 
 var paris = new City('paris', 20, 38, 2.3)
 paris.cookiesSold();
-paris.render();
+///paris.render();
 
 var lima = new City('lima', 2, 16, 4.6);
 lima.cookiesSold();
-lima.render();
+//lima.render();
 
 
 var table = document.getElementById('data');
 
-// function createHeader() {
-//   var createTR = document.createElement('tr');
-//   var empty = document.createElement('th');
-//   createTR.append(empty);
+function createHeader() {
+  var createTR = document.createElement('tr');
+  var empty = document.createElement('th');
+  createTR.append(empty);
 
-//   for (var i = 0; i < hours.length; i++) {
+  for (var i = 0; i < hours.length; i++) {
 
-//     var createTH = document.createElement('th');
+    var createTH = document.createElement('th');
 
-//     createTH.textContent = hours[i];
+    createTH.textContent = hours[i];
 
-//     createTR.appendChild(createTH);
+    createTR.appendChild(createTH);
 
-//   }
+  }
 
-//   table.appendChild(createTR);
-
-
-// }
+  table.appendChild(createTR);
 
 
-// City.prototype.populate = function () {
-
-//   var createTR = document.createElement('tr');
-
-//   var empty = document.createElement('td');
-//   empty.textContent = this.name;
-//   createTR.append(empty);
+}
 
 
-//   for (var i = 0; i < hours.length; i++) {
+City.prototype.populate = function () {
 
-//     var createTH = document.createElement('td');
-//     createTH.textContent = this.cookiesPurchased[i];
-//     createTR.appendChild(createTH);
+  var createTR = document.createElement('tr');
 
-//   }
-
-//   table.appendChild(createTR);
+  var empty = document.createElement('td');
+  empty.textContent = this.name;
+  createTR.append(empty);
 
 
-// };
+  for (var i = 0; i < hours.length; i++) {
+
+    var createTH = document.createElement('td');
+    createTH.textContent = this.cookiesPurchased[i];
+    createTR.appendChild(createTH);
+
+  }
+
+  table.appendChild(createTR);
+
+
+};
 
 
 
 //////////////////////
-// City.prototype.footer = function () {
+City.prototype.footer = function () {
 
-//   // var trEl = document.createElement('tr');
+  // var trEl = document.createElement('tr');
 
-//   // var tdEl = document.createElement('td');
-//   // tdEl.textContent = 'Total';
-//   // trEl.appendChild(tdEl);
+  // var tdEl = document.createElement('td');
+  // tdEl.textContent = 'Total';
+  // trEl.appendChild(tdEl);
 
-//   // table.appendChild(trEl);
-//   var trEl = document.createElement('tr');
+  // table.appendChild(trEl);
+  var trEl = document.createElement('tr');
 
-//   var tdEl = document.createElement('td');
+  var tdEl = document.createElement('td');
 
-//   tdEl.textContent = 'Hourly Totals: ';
+  tdEl.textContent = 'Hourly Totals: ';
 
-//   trEl.appendChild(tdEl);
+  trEl.appendChild(tdEl);
 
   
-//   //////
-//   for (var i=0; i < hours.length; i++) {
+  //////
+  for (var i=0; i < hours.length; i++) {
 
-//     var storesHourly = 0;
-//     var td = document.createElement('td');
+    var storesHourly = 0;
+    var td = document.createElement('td');
     
     
-//     for (var j = 0; j < City.all.length; j++) {
-//       storesHourly += City.all[j].cookiesPurchased[i];
-//       td.textContent = storesHourly;
-//       trEl.appendChild(td);
-//     }
+    for (var j = 0; j < City.all.length; j++) {
+      storesHourly += City.all[j].cookiesPurchased[i];
+      td.textContent = storesHourly;
+      trEl.appendChild(td);
+    }
 
 
-//   }
-//   var tdElem = document.createElement('td');
-//   tdElem.textContent = City.cookiesPurchased;
-//   trEl.appendChild(tdElem);
-//   table.appendChild(trEl);
-// };
+  }
+  var tdElem = document.createElement('td');
+  tdElem.textContent = City.cookiesPurchased;
+  trEl.appendChild(tdElem);
+  table.appendChild(trEl);
+};
 
 
 
@@ -180,7 +180,7 @@ tokyo.populate();
 dubai.populate();
 paris.populate();
 lima.populate();
-//seattle.footer();
+seattle.footer();
 
 
 
