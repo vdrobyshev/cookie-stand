@@ -1,6 +1,24 @@
-ul{
+ul {
   position: relative;
   list-style-position: inside;
-
   list-style-type: initial;
+}
+
+input:invalid {
+  border: 1px solid rgb(65, 53, 233);
+}
+
+fieldset {
+  //display: block;
+  margin: 10px;
+  padding: 15px;
+  width: 15%;
+  position: relative;
+  left: 30%;
+}
+
+#submit {
+  position: relative;
+  left: 35%;
+  margin-top: 10px;
 }
