@@ -128,10 +128,7 @@ City.prototype.populate = function () {
 
 };
 
-
-
-//////////////////////
-City.prototype.footer = function () {
+function footer() {
 
   var trEl = document.createElement('tr');
 
@@ -162,7 +159,69 @@ City.prototype.footer = function () {
   table.appendChild(trEl);
 };
 
+//////////////////////
+// City.prototype.footer = function () {
 
+//   var trEl = document.createElement('tr');
+
+//   var tdEl = document.createElement('td');
+
+//   tdEl.textContent = 'Hourly Totals: ';
+
+//   trEl.appendChild(tdEl);
+
+
+//   for (var i = 0; i < hours.length; i++) {
+
+//     var storesHourly = 0;
+//     var td = document.createElement('td');
+
+
+//     for (var j = 0; j < City.all.length; j++) {
+//       storesHourly += City.all[j].cookiesPurchased[i];
+//       td.textContent = storesHourly;
+//       trEl.appendChild(td);
+//     }
+
+
+//   }
+//   var tdElem = document.createElement('td');
+//   tdElem.textContent = City.cookiesPurchased;
+//   trEl.appendChild(tdElem);
+//   table.appendChild(trEl);
+// };
+
+
+
+
+
+//var numValidation1 = document.getElementById('minvalue');
+// var numValidation2 = document.getElementById('maxvalue');
+
+
+
+// numValidation2.addEventListener('submit', numvalid);
+
+
+// function numvalid(event) {
+//   event.preventDefault();
+
+
+//   var value1 = event.target.minvalue.value;
+//   var value2 = event.target.maxvalue.value;
+
+//   console.log(value1, value2);
+
+//   if (value1 >= value2) {
+//     alert('min has to be less than max');
+
+//     document.getElementById("minvalue").value = "";
+//     document.getElementById("maxvalue").value = "";
+//     document.getElementById('minvalue').focus();
+//     event.target.minvalue.value = null;
+//     event.target.maxvalue.value = null;
+//   }
+// }
 
 
 var addStore = document.getElementById('user-form');
@@ -171,7 +230,11 @@ addStore.addEventListener('submit', addNewStore);
 
 function addNewStore(event) {
 
+
   event.preventDefault();
+
+
+  table.removeChild(table.lastChild);
 
   var locationName = event.target.cityname.value;
   var minCust = event.target.minvalue.value;
@@ -183,7 +246,7 @@ function addNewStore(event) {
 
   obj.cookiesSold();
   obj.populate();
-  obj.footer();
+  footer();
 
 
   event.target.cityname.value = null;
@@ -207,4 +270,4 @@ function callpopulate() {
 
 callpopulate();
 
-
+footer();
