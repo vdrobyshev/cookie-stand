@@ -1,3 +1,8 @@
+fieldset{
+  background-color: aliceblue;
+}
+
+
 ul {
   position: relative;
   list-style-position: inside;
@@ -19,6 +24,28 @@ fieldset {
 
 #submit {
   position: relative;
-  left: 35%;
+  left: 40%;
   margin-top: 10px;
+}
+#cityname{
+  position: relative;
+  left: 5%;
+  margin: 3%;
+}
+
+#minvalue{
+  position: relative;
+  left: 6%;
+  margin: 3%;
+}
+#maxvalue{
+position: relative;
+  left: 5%;
+  margin: 3%;
+}
+
+#avgvalue{
+  position: relative;
+  left: 6%;
+  margin: 3%;
 }
