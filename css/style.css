@@ -1,6 +1,6 @@
-* {
+/* * {
   outline: 1px dotted red;
-}
+} */
 
 body {
   /* background-image:  url('../images/salmon.png'); */
@@ -19,11 +19,14 @@ body {
 }
 
 #welcome {
+  position: relative;
   font-family: sans-serif;
   font-size: 400%;
   margin-left: 30%;
-  position: relative;
+  margin-bottom: 3%;
   color: rgb(100, 92, 92);
+  margin-top: 20px;
+  z-index: 2;
 }
 
 h2 {
@@ -31,18 +34,28 @@ h2 {
   font-size: 300%;
   margin-left: 25%;
   position: relative;
+  z-index: 2;
 }
 
 #frosted {
   position: absolute;
-  left: 68%;
-  top: 6%;
+  left: 70%;
+  top: 20px;
+  z-index: 1;
+}
+
+#chinook {
+  position: absolute;
+  left: 2%;
+  top: 25px;
+  width: 16%;
+  z-index: 2;
 }
 
 #cutter {
   position: relative;
   width: 7%;
-  left: 47%;
+  left: 45%;
   margin-bottom: 8px;
 }
 
@@ -50,35 +63,56 @@ hr {
   border-width: 5px;
 }
 
+#fam {
+  position: relative;
+  width: 70%;
+  border: 2px solid violet;
+  margin-left: 13%;
+  background-color: azure;
+}
+
 #family {
+  position: relative;
   float: left;
   width: 18%;
-  vertical-align: middle;
+  
+  left: 3.5%;
+  top: 15px;
 }
 
 #pat {
-  font-size: 280%;
-  padding: 15px;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  color: rgb(15, 168, 228);
+  font-size: 190%;
+  font-family: padding: 15px;
   text-align: justify;
   margin-left: 25%;
+  margin-right: 5%;
+  
 }
 
 #locationheader {
   text-align: center;
   margin: 1%;
+  color: blue;
+  font-family: mansalva;
 }
 
 #cities {
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: blueviolet;
   border: 1px solid red;
   width: 100%;
-  /* height: 400px; */
+  background-color: antiquewhite;
 }
 
 .city {
   display: inline-block;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 18%;
-  margin: 16px;
+  margin: 0.7%;
+  text-align: center;
 }
 
 h5 {
@@ -90,16 +124,91 @@ h5 {
 h6 {
   font-size: 150%;
   text-align: center;
-  margin: 10px;
+  margin: 0, 7%;
 }
 
 .hours {
   font-size: 100%;
   text-align: center;
-  margin: 10px;
+  margin: 0.7%;
 }
-.email{
-  /* position: relative; */
+
+.email {
+  position: relative;
+  margin-left: 0.7%;
+}
+
+.adress {
+  font-size: 150%;
   text-align: center;
-  margin: 10px;
-  }
+  margin: 0.7%;
+}
+
+.toys {
+  display: inline-block;
+  position: relative;
+  left: 13%;
+}
+
+.merch {
+  display: inline-block;
+  margin: 15px;
+}
+
+#soon {
+  position: relative;
+  left: 41%;
+  width: 350px;
+  margin: 25px;
+  color: blue;
+  font-family: mansalva;
+}
+
+#shirt {
+  position: relative;
+  width: 50%;
+  left: 25%;
+}
+
+#fish {
+  position: relative;
+  width: 450px;
+  height: auto;
+  /* left: 45%; */
+}
+
+#shirttext {
+  font-size: 130%;
+  margin: 15px;
+}
+
+#fishtext {
+  font-size: 130%;
+  margin: 25px;
+  text-align: center;
+  margin-top: 20p
+}
+
+#thanks {
+  font-size: 200%;
+  margin: 15px;
+  position: relative;
+  left: 35%;
+  font-family: mansalva;
+}
+
+#remember {
+  font-size: 200%;
+  margin: 15px;
+  position: relative;
+  left: 45%;
+  font-family: mansalva;
+}
+
+#salmon {
+  position: relative;
+  width: 450px;
+  height: auto;
+  left: 40%;
+  
+}
