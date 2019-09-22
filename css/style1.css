@@ -1,3 +1,9 @@
+body{
+  width: 960px;
+  margin: 0px auto;
+  background-color: beige;
+}
+
 fieldset{
   background-color: aliceblue;
 }
@@ -14,38 +20,90 @@ input:invalid {
 }
 
 fieldset {
-  //display: block;
-  margin: 10px;
+ 
+  margin-top: 30px;
   padding: 15px;
-  width: 15%;
+  width: 40%;
   position: relative;
-  left: 30%;
+  
+  margin: 0px auto;
+  margin-top: 25px;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(30, 27, 48);
+  
 }
 
 #submit {
+  
   position: relative;
   left: 40%;
   margin-top: 10px;
+  width: 30%;
+  height: 30px;
+  background-color: rgba(161, 210, 243, 0.986);
 }
 #cityname{
   position: relative;
   left: 5%;
   margin: 3%;
+  width: 250px;
+  height: 20px;
+ 
 }
 
 #minvalue{
   position: relative;
   left: 6%;
   margin: 3%;
+  width: 250px;
+  height: 20px;
 }
 #maxvalue{
 position: relative;
   left: 5%;
   margin: 3%;
+  width: 250px;
+  height: 20px;
 }
 
 #avgvalue{
   position: relative;
   left: 6%;
   margin: 3%;
+  width: 250px;
+  height: 20px;
+}
+
+h1{
+  margin: 15px;
+  
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: blue;
+}
+
+body img{
+ 
+
+  position: absolute;
+  width: 25%;
+  margin-left: 13%;
+  margin-top: 5%;
+}
+
+section{
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#data th{
+  background-color: rgb(120, 224, 238);
+}
+#data tr:nth-child(even){
+background-color: rgb(209, 201, 201);
+}
+
+#data td:nth-child(1){
+  background-color:  rgb(120, 224, 238);
 }
