@@ -33,6 +33,9 @@ fieldset {
   color: rgb(30, 27, 48);
   
 }
+fieldset label{
+  color: rgb(61, 43, 221);
+}
 
 #submit {
   
@@ -87,8 +90,8 @@ body img{
  
 
   position: absolute;
-  width: 25%;
-  margin-left: 13%;
+  width: 20%;
+  margin-left: 15%;
   margin-top: 5%;
 }
 
@@ -104,6 +107,14 @@ section{
 background-color: rgb(209, 201, 201);
 }
 
+#data tr:nth-child(odd){
+  background-color: rgb(177, 168, 168);
+  }
+
 #data td:nth-child(1){
   background-color:  rgb(120, 224, 238);
+}
+#data :last-child td:nth-child(18)
+{
+  background-color: beige;
 }
