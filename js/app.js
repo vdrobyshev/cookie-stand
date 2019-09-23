@@ -74,7 +74,7 @@ var dubai = new City('dubai', 11, 38, 3.7);
 dubai.cookiesSold();
 
 
-var paris = new City('paris', 20, 38, 2.3)
+var paris = new City('paris', 20, 38, 2.3);
 paris.cookiesSold();
 
 var lima = new City('lima', 2, 16, 4.6);
@@ -156,40 +156,9 @@ function footer() {
   tdElem.textContent = City.cookiesPurchased;
   trEl.appendChild(tdElem);
   table.appendChild(trEl);
-};
+}
 
 
-
-
-
-
-//var numValidation1 = document.getElementById('minvalue');
-// var numValidation2 = document.getElementById('maxvalue');
-
-
-
-// numValidation2.addEventListener('submit', numvalid);
-
-
-// function numvalid(event) {
-//   event.preventDefault();
-
-
-//   var value1 = event.target.minvalue.value;
-//   var value2 = event.target.maxvalue.value;
-
-//   console.log(value1, value2);
-
-//   if (value1 >= value2) {
-//     alert('min has to be less than max');
-
-//     document.getElementById("minvalue").value = "";
-//     document.getElementById("maxvalue").value = "";
-//     document.getElementById('minvalue').focus();
-//     event.target.minvalue.value = null;
-//     event.target.maxvalue.value = null;
-//   }
-// }
 
 
 var addStore = document.getElementById('user-form');
