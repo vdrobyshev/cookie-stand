@@ -1,9 +1,4 @@
-* {
-  outline: 1px dotted red;
-}
-
 body {
-  /* background-image:  url('../images/salmon.png'); */
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
@@ -27,6 +22,7 @@ body {
   color: rgb(100, 92, 92);
   margin-top: 20px;
   z-index: 2;
+  text-shadow: 2px 2px #ff0000;
 }
 
 h2 {
@@ -75,21 +71,19 @@ hr {
   position: relative;
   float: left;
   width: 18%;
-  
   left: 3.5%;
   top: 15px;
 }
 
 #pat {
   padding: 5px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(15, 168, 228);
   font-size: 190%;
   font-family: padding: 15px;
   text-align: justify;
   margin-left: 25%;
   margin-right: 5%;
-  
 }
 
 #locationheader {
@@ -100,8 +94,8 @@ hr {
 }
 
 #cities {
-font-family: Georgia, 'Times New Roman', Times, serif;
-color: blueviolet;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: blueviolet;
   border: 1px solid red;
   width: 99%;
   background-color: antiquewhite;
@@ -169,13 +163,14 @@ h6 {
   position: relative;
   width: 50%;
   left: 25%;
+  margin-bottom: 15px;
 }
 
 #fish {
   position: relative;
   width: 450px;
-  height: auto;
-  /* left: 45%; */
+  /* height: auto; */
+  bottom: 20px;
 }
 
 #shirttext {
@@ -185,9 +180,9 @@ h6 {
 
 #fishtext {
   font-size: 130%;
-  margin: 25px;
+  margin: 10px;
   text-align: center;
-  margin-top: 20p
+  /* margin-top: 20p */
 }
 
 #thanks {
@@ -213,5 +208,14 @@ h6 {
   width: 450px;
   height: auto;
   left: 40%;
-  
+}
+
+footer a {
+  clear: both;
+  position: relative;
+  width: 50px;
+  top: 60px;
+  left: 18%;
+  font-size: 20px;
+  margin: 15px;
 }

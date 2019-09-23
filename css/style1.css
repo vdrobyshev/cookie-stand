@@ -1,13 +1,17 @@
-body{
+body {
   width: 960px;
   margin: 0px auto;
   background-color: beige;
 }
 
-fieldset{
-  background-color: aliceblue;
+header a {
+  position: absolute;
+  width: 180px;
 }
 
+fieldset {
+  background-color: aliceblue;
+}
 
 ul {
   position: relative;
@@ -20,25 +24,22 @@ input:invalid {
 }
 
 fieldset {
- 
   margin-top: 30px;
   padding: 15px;
   width: 40%;
   position: relative;
-  
   margin: 0px auto;
   margin-top: 25px;
   font-size: 17px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(30, 27, 48);
-  
 }
-fieldset label{
+
+fieldset label {
   color: rgb(61, 43, 221);
 }
 
 #submit {
-  
   position: relative;
   left: 40%;
   margin-top: 10px;
@@ -46,31 +47,16 @@ fieldset label{
   height: 30px;
   background-color: rgba(161, 210, 243, 0.986);
 }
-#cityname{
-  position: relative;
-  left: 5%;
-  margin: 3%;
-  width: 250px;
-  height: 20px;
- 
-}
 
-#minvalue{
+#cityname {
   position: relative;
-  left: 6%;
-  margin: 3%;
-  width: 250px;
-  height: 20px;
-}
-#maxvalue{
-position: relative;
   left: 5%;
   margin: 3%;
   width: 250px;
   height: 20px;
 }
 
-#avgvalue{
+#minvalue {
   position: relative;
   left: 6%;
   margin: 3%;
@@ -78,43 +64,57 @@ position: relative;
   height: 20px;
 }
 
-h1{
+#maxvalue {
+  position: relative;
+  left: 5%;
+  margin: 3%;
+  width: 250px;
+  height: 20px;
+}
+
+#avgvalue {
+  position: relative;
+  left: 6%;
+  margin: 3%;
+  width: 250px;
+  height: 20px;
+}
+
+h1 {
   margin: 15px;
-  
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: blue;
 }
 
-body img{
- 
-
+body img {
   position: absolute;
   width: 20%;
   margin-left: 15%;
   margin-top: 5%;
 }
 
-section{
+section {
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#data th{
+#data th {
   background-color: rgb(120, 224, 238);
 }
-#data tr:nth-child(even){
-background-color: rgb(209, 201, 201);
+
+#data tr:nth-child(even) {
+  background-color: rgb(209, 201, 201);
 }
 
-#data tr:nth-child(odd){
+#data tr:nth-child(odd) {
   background-color: rgb(177, 168, 168);
-  }
-
-#data td:nth-child(1){
-  background-color:  rgb(120, 224, 238);
 }
-#data :last-child td:nth-child(18)
-{
+
+#data td:nth-child(1) {
+  background-color: rgb(120, 224, 238);
+}
+
+#data :last-child td:nth-child(18) {
   background-color: beige;
 }
